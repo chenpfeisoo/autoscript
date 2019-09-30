@@ -5,7 +5,7 @@ set -ex
 input_info=$1
 image_name=`echo $input_info | awk -F ':' '{ print $1  }'  | awk  -F '/' '{ print $NF  }'` 
 image_tag=`echo $input_info | awk -F ':' '{ print $2  }'` 
-harbor_registry='172.168.200.50/cfss'
+harbor_registry='myharbor.com/cfss'  #harbor仓库地址
 function  docker_pull(){
    docker pull $input_info
 }
